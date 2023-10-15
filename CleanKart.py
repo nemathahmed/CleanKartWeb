@@ -1,31 +1,31 @@
-import streamlit as st
+
 import pandas as pd
 from streamlit_card import card
 import random
-from googlesearch import search
+
 import json 
 image_cache = {}
 
-def get_product_image_url(product_name):
-    # Check if the image URL is already cached
-    if product_name in image_cache:
-        return image_cache[product_name]
+# def get_product_image_url(product_name):
+#     # Check if the image URL is already cached
+#     if product_name in image_cache:
+#         return image_cache[product_name]
 
-    try:
-        # Perform a Google search for the product name and get the first image result
-        search_results = search(product_name + " product", num=1, stop=1, pause=2)
+#     try:
+#         # Perform a Google search for the product name and get the first image result
+#         search_results = search(product_name + " product", num=1, stop=1, pause=2)
         
-        # Extract the URL of the first image result
-        for url in search_results:
-            if url.endswith(('.jpg', '.png', '.jpeg', '.gif', '.bmp', '.webp')):
-                # Cache the image URL
-                image_cache[product_name] = url
-                return url
-    except Exception as e:
-        print("Error:", e)
+#         # Extract the URL of the first image result
+#         for url in search_results:
+#             if url.endswith(('.jpg', '.png', '.jpeg', '.gif', '.bmp', '.webp')):
+#                 # Cache the image URL
+#                 image_cache[product_name] = url
+#                 return url
+#     except Exception as e:
+#         print("Error:", e)
     
-    # Return None if no image URL is found
-    return None
+#     # Return None if no image URL is found
+#     return None
 
 
 

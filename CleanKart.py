@@ -1,6 +1,6 @@
 
 import pandas as pd
-from streamlit_card import card
+# from streamlit_card import card
 import random
 
 import json 

@@ -51,7 +51,7 @@ def save_cart(cart):
 # Load cart data from the file
 cart = load_cart()
 # Load CSV data
-@st.cache  # This will cache the data for better performance
+# @st.cache  # This will cache the data for better performance
 def load_data():
     data = pd.read_csv('GroceryDB_foods.csv')  # Replace 'GroceryDB_foods.csv' with your CSV file
     return data
